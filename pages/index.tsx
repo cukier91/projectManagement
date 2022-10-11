@@ -1,12 +1,11 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+
+import ProjectMatrix from '../components/ProjectsMatrix/ProjectMatrix';
 import styles from '../styles/Home.module.css';
 
-const Home: NextPage = () => {
+const Home = () => {
 	return (
-		<div>
-			
+		<div className='py-3 px-8'>
+			<ProjectMatrix />
 		</div>
 	);
 };

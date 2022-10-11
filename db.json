@@ -1,0 +1,21 @@
+{
+	"posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+	"projects": [
+		{
+			"id": 1,
+			"ewr": "2222-2222",
+			"Type": "SAFE",
+			"budget": 122000,
+			"free_budget": 22000,
+			"end_date": "22-07-2022"
+		},
+		{
+			"id": 2,
+			"ewr": "3333-3333",
+			"Type": "SAFE",
+			"budget": 12000,
+			"free_budget": 2000,
+			"end_date": "22-07-2022"
+		}
+	]
+}
