@@ -52,7 +52,7 @@ export default function ProjectMatrix() {
 							End date
 						</th>
 						<th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
-							Archive
+							
 						</th>
 					</tr>
 				</thead>
