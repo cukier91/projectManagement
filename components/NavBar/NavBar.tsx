@@ -4,8 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 export default function NavBar() {
 	return (
-		<header className="bg-slate-100">
-			<div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
+		<header className=" bg-slate-100">
+			<div className="max-w-screen-xl w-full px-4 mx-auto sm:px-6 lg:px-8">
 				<div className="flex items-center justify-between h-16">
 					<div className="md:flex md:items-center md:gap-12">
 						<a className="block text-teal-600" href="/">
@@ -20,7 +20,7 @@ export default function NavBar() {
 							</h2>
 
 							<ul className="flex items-center gap-6 text-sm">
-							<li>
+								<li>
 									<Link href="/">
 										<a className="text-gray-500 transition hover:text-gray-500/75">
 											New Project

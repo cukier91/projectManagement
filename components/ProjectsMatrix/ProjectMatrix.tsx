@@ -32,8 +32,8 @@ export default function ProjectMatrix() {
 	console.log(projects);
 
 	return (
-		<div className="overflow-x-auto">
-			<table className="min-w-full divide-y-2 divide-gray-200 text-sm">
+		<div className="overflow-x-auto sm:flex justify-center">
+			<table className="w-2/3 divide-y-2 divide-gray-200 text-sm ">
 				<thead>
 					<tr>
 						<th className="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900">
