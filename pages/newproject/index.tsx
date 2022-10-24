@@ -1,32 +1,71 @@
-import React from 'react';
-import { Formik, Field, Form, FormikHelpers } from 'formik';
+import React, { useEffect, useState } from 'react';
+import {
+	Formik,
+	Field,
+	Form,
+	FormikHelpers,
+	useFormik,
+	FormikProvider,
+} from 'formik';
+import { type } from 'os';
+import { json } from 'node:stream/consumers';
 
 interface Values {
-	firstName: string;
-	lastName: string;
+	name: string;
+	endDate: string;
 	ewr: string;
+	type: string;
+	budget: number;
+}
+interface TypeResponse {
+	id: number;
+	name: string;
 }
 
 export default function NewProject() {
+	const [type, setType] = useState<TypeResponse[]>([]);
+
+	async function handleSubmit(values: Values) {
+		const response = await fetch('http://localhost:3000/projects', {
+			method: 'post',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(values),
+		});
+		console.log(response.json());
+	}
+
+	async function getType() {
+		const response = await fetch('http://localhost:3000/types');
+		const json = await response.json();
+		setType(json as TypeResponse[]);
+	}
+
+	useEffect(() => {
+		try {
+			getType();
+		} catch (error) {
+			console.log(error);
+		}
+	}, []);
+
+	console.log(type);
+
 	return (
-		<div className="flex justify-center w-full h-96 sm:h-screen items-center">
-			<Formik
+		<div className="flex justify-center flex-col h-96 sm:h-screen items-center">
+			<p className="text-lg font-bold mb-5"> Załóż nowy projekt</p>
+			<Formik<Values>
 				initialValues={{
-					firstName: '',
-					lastName: '',
+					name: '',
+					endDate: '',
 					ewr: '',
+					type: '',
+					budget: 0,
 				}}
-				onSubmit={(
-					values: Values,
-					{ setSubmitting }: FormikHelpers<Values>
-				) => {
-					setTimeout(() => {
-						alert(JSON.stringify(values, null, 2));
-						setSubmitting(false);
-					}, 500);
-				}}
+				onSubmit={handleSubmit}
 			>
-				<Form className="flex flex-col px-10 py-10 border-2">
+				<Form className="flex flex-col w-2/3 h-64 md:px-16 justify-center align-middle gap-3 mt-5 md:mt-2 md:w-1/3 md:h-96">
 					<label
 						htmlFor="ewr"
 						className="block text-xs font-medium text-gray-700"
@@ -37,21 +76,77 @@ export default function NewProject() {
 						type="text"
 						id="ewr"
 						name="ewr"
-						placeholder="1111-1111"
-						class="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+						placeholder="Your ewr number..."
+						className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
 					/>
-
-					<label htmlFor="lastName">Last Name</label>
-					<Field id="lastName" name="lastName" placeholder="Doe" />
-
-					<label htmlFor="email">Email</label>
+					<label
+						htmlFor="name"
+						className="block text-xs font-medium text-gray-700"
+					>
+						Project name
+					</label>
 					<Field
-						id="email"
-						name="email"
-						placeholder="john@acme.com"
-						type="email"
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Your ewr number..."
+						className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
 					/>
-					<button type="submit">Submit</button>
+					<label
+						htmlFor="type"
+						className="block text-xs font-medium text-gray-700"
+					>
+						Type
+					</label>
+					<Field
+						component="select"
+						id="type"
+						name="type"
+						className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+					>
+						{type.map(({ id, name }) => {
+							return (
+								<option key={id} value={name}>
+									{name}
+								</option>
+							);
+						})}
+					</Field>
+					<label
+						htmlFor="budget"
+						className="block text-xs font-medium text-gray-700"
+					>
+						Budget
+					</label>
+					<Field
+						className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+						id="budget"
+						name="budget"
+						placeholder="5 000 000"
+						type="number"
+						//step="0.1"
+						min={0}
+					/>
+					<label
+						htmlFor="endDate"
+						className="block text-xs font-medium text-gray-700"
+					>
+						End date
+					</label>
+					<Field
+						className="mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+						id="endDate"
+						name="endDate"
+						type="date"
+					/>
+					<span className="flex justify-end">
+						<button
+							className=" bg-teal-600 w-2/5 md:w-1/5  text-white px-1 py-1 rounded-md"
+							type="submit"
+						>
+							Submit
+						</button>
+					</span>
 				</Form>
 			</Formik>
 		</div>
