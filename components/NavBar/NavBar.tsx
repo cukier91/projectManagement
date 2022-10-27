@@ -11,6 +11,28 @@ export default function NavBar() {
 						<a className="block text-teal-600" href="/">
 							<span className="sr-only">Home</span>
 						</a>
+						<Link href="/">
+							<a>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="icon icon-tabler icon-tabler-chart-bar"
+									width="35"
+									height="35"
+									viewBox="0 0 24 24"
+									strokeWidth="1.5"
+									stroke="teal"
+									fill="white"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+								>
+									<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+									<rect x="3" y="12" width="6" height="8" rx="1"></rect>
+									<rect x="9" y="8" width="6" height="12" rx="1"></rect>
+									<rect x="15" y="4" width="6" height="16" rx="1"></rect>
+									<line x1="4" y1="20" x2="18" y2="20"></line>
+								</svg>
+							</a>
+						</Link>
 					</div>
 
 					<div className="hidden md:block ">
@@ -21,7 +43,7 @@ export default function NavBar() {
 
 							<ul className="flex items-center gap-6 text-sm">
 								<li>
-									<Link href="/">
+									<Link href="/newproject">
 										<a className="text-gray-500 transition hover:text-gray-500/75">
 											New Project
 										</a>

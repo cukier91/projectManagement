@@ -16,6 +16,8 @@ interface Values {
 	ewr: string;
 	type: string;
 	budget: number;
+	isArchived: boolean;
+	wbs: Array<object>;
 }
 interface TypeResponse {
 	id: number;
@@ -50,11 +52,12 @@ export default function NewProject() {
 		}
 	}, []);
 
-	console.log(type);
-
 	return (
 		<div className="flex justify-center flex-col h-96 sm:h-screen items-center">
-			<p className="text-lg font-bold mb-5"> Załóż nowy projekt</p>
+			<p className="text-lg font-bold mb-12 mt-12 md:mt-2">
+				{' '}
+				Załóż nowy projekt
+			</p>
 			<Formik<Values>
 				initialValues={{
 					name: '',
@@ -62,6 +65,8 @@ export default function NewProject() {
 					ewr: '',
 					type: '',
 					budget: 0,
+					isArchived: false,
+					wbs: [],
 				}}
 				onSubmit={handleSubmit}
 			>

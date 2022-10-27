@@ -1,53 +1,49 @@
 {
-	"posts": [
-		{
-			"id": 1,
-			"title": "json-server",
-			"author": "typicode"
-		}
-	],
-	"projects": [
-		{
-			"id": 1,
-			"ewr": "2222-2222",
-			"type": "SAFE",
-			"budget": 122000,
-			"free_budget": 22000,
-			"endDate": "22-07-2022"
-		},
-		{
-			"id": 2,
-			"ewr": "3333-3333",
-			"type": "SAFE",
-			"budget": 12000,
-			"free_budget": 2000,
-			"endDate": "22-07-2022"
-		},
-		{
-			"name": "aaaaa",
-			"endDate": "2022-10-27",
-			"ewr": "111111",
-			"type": "AFE",
-			"budget": 12222,
-			"id": 7
-		}
-	],
-	"types": [
-		{
-			"id": 1,
-			"name": "SAFE"
-		},
-		{
-			"id": 2,
-			"name": "AFE"
-		},
-		{
-			"id": 3,
-			"name": "SVI"
-		},
-		{
-			"id": 4,
-			"name": "OPEX"
-		}
-	]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "projects": [
+    {
+      "name": "New screen changer2",
+      "endDate": "2023-01-07",
+      "ewr": "2022-1231",
+      "type": "AFE",
+      "budget": 2300000,
+      "isArchived": true,
+      "wbs": [],
+      "id": 1
+    },
+    {
+      "name": "New screen changer",
+      "endDate": "2023-01-07",
+      "ewr": "2022-1232",
+      "type": "AFE",
+      "budget": 2300000,
+      "isArchived": false,
+      "wbs": [],
+      "id": 2
+    }
+  ],
+  "types": [
+    {
+      "id": 1,
+      "name": "SAFE"
+    },
+    {
+      "id": 2,
+      "name": "AFE"
+    },
+    {
+      "id": 3,
+      "name": "SVI"
+    },
+    {
+      "id": 4,
+      "name": "OPEX"
+    }
+  ]
 }
