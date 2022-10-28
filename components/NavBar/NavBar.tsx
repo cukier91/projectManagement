@@ -57,7 +57,7 @@ export default function NavBar() {
 									</Link>
 								</li>
 								<li>
-									<Link href="/">
+									<Link href="/vendorslist">
 										<a className="text-gray-500 transition hover:text-gray-500/75">
 											Vendors
 										</a>
