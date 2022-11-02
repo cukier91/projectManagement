@@ -1,49 +1,111 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "projects": [
-    {
-      "name": "New screen changer2",
-      "endDate": "2023-01-07",
-      "ewr": "2022-1231",
-      "type": "AFE",
-      "budget": 2300000,
-      "isArchived": true,
-      "wbs": [],
-      "id": 1
-    },
-    {
-      "name": "New screen changer",
-      "endDate": "2023-01-07",
-      "ewr": "2022-1232",
-      "type": "AFE",
-      "budget": 2300000,
-      "isArchived": false,
-      "wbs": [],
-      "id": 2
-    }
-  ],
-  "types": [
-    {
-      "id": 1,
-      "name": "SAFE"
-    },
-    {
-      "id": 2,
-      "name": "AFE"
-    },
-    {
-      "id": 3,
-      "name": "SVI"
-    },
-    {
-      "id": 4,
-      "name": "OPEX"
-    }
-  ]
+	"posts": [
+		{
+			"id": 1,
+			"title": "json-server",
+			"author": "typicode"
+		}
+	],
+	"projects": [
+		{
+			"name": "New screen changer2",
+			"endDate": "2023-01-07",
+			"ewr": "2022-1231",
+			"type": "AFE",
+			"budget": 2300000,
+			"isArchived": true,
+			"wbs": [],
+			"id": 1
+		},
+		{
+			"name": "New screen changer",
+			"endDate": "2023-01-07",
+			"ewr": "2022-1232",
+			"type": "AFE",
+			"budget": 2300000,
+			"isArchived": false,
+			"wbs": [],
+			"id": 2
+		}
+	],
+	"types": [
+		{
+			"id": 1,
+			"name": "SAFE"
+		},
+		{
+			"id": 2,
+			"name": "AFE"
+		},
+		{
+			"id": 3,
+			"name": "SVI"
+		},
+		{
+			"id": 4,
+			"name": "OPEX"
+		}
+	],
+	"worktypes": [
+		{
+			"id": 1,
+			"name": "Budowlane"
+		},
+		{
+			"id": 2,
+			"name": "Wentylacja"
+		},
+		{
+			"id": 3,
+			"name": "Elektryczne"
+		},
+		{
+			"id": 4,
+			"name": "Projektowanie i budowa maszyn"
+		},
+		{
+			"id": 5,
+			"name": "Maszyny pakujące"
+		},
+		{
+			"id": 6,
+			"name": "Transportery i napędy"
+		},
+		{
+			"id": 7,
+			"name": "Czujniki i automatyka"
+		},
+		{
+			"id": 8,
+			"name": "Wyposażenie magazynowe"
+		},
+		{
+			"id": 9,
+			"name": "Ocena ryzyka"
+		},
+		{
+			"id": 10,
+			"name": "Dostosowanie CE"
+		},
+		{
+			"id": 11,
+			"name": "Sprzęt laboratoryjny"
+		},
+		{
+			"id": 12,
+			"name": "Systemy wizyjne"
+		},
+		{
+			"id": 13,
+			"name": "Urządzenia i maszyny pomiarowe"
+		},
+		{
+			"id": 14,
+			"name": "Prace remontowe"
+		},
+		{
+			"id": 15,
+			"name": "Programowanie"
+		}
+	]
 }
